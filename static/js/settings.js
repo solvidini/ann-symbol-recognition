@@ -1,0 +1,1 @@
+export const numberOfDendrites = 144;
