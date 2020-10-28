@@ -1,98 +1,143 @@
 :root {
-  --color-dark: #1b1b1b;
-  --color-light: #1ffff4;
+   --color-dark: #1b1b1b;
+   --color-light: #1ffff4;
+   --color-correct: #46f56c;
+   --color-incorrect: #e96a6a;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 body {
-  background-color: var(--color-dark);
-  font-family: sans-serif;
-  font-size: 62.5%;
+   background-color: var(--color-dark);
+   font-family: sans-serif;
+   font-size: 62.5%;
 }
 
 .app {
-  color: white;
-  padding: 1rem;
-  font-size: 1.6rem;
-  width: 100%;
-  height: 100vh;
+   position: relative;
+   color: white;
+   padding: 1rem;
+   font-size: 1.6rem;
+   width: 100%;
+   height: 100vh;
+   max-width: 100rem;
+   margin: 0 auto;
 
-  display: flex;
+   display: flex;
 
-  justify-content: center;
-  align-items: center;
-  
-  flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   flex-direction: column;
 }
 
 .grid {
-  width: 40rem;
-  height: 40rem;
-  border: 2px solid white;
-  margin: 0 auto;
-  max-width: 100%;
+   width: 36rem;
+   height: 36rem;
+   border: 2px solid white;
+   margin: 0 auto;
+   max-width: 100%;
 
-  display: grid;
-  grid-template-rows: repeat(12, 1fr);
-  grid-template-columns: repeat(12, 1fr);
+   display: grid;
+   grid-template-rows: repeat(12, 1fr);
+   grid-template-columns: repeat(12, 1fr);
 }
 
 .grid__item {
-  border: 1px solid white;
-  background-color: var(--color-dark);
+   /* border: 1px solid white; */
+   background-color: var(--color-dark);
 }
 
 .grid__item--active {
-  background-color: white;
+   background-color: white;
 }
 
 .grid__item:hover,
 .grid__item:focus {
-  background-color: var(--color-light);
-  cursor: pointer;
+   background-color: var(--color-light);
+   cursor: pointer;
 }
 
-.buttons {
-  margin: 1rem auto;
-  width: 40rem;
+.group {
+   margin: 1rem auto;
+   width: 40rem;
 
-  display: flex;
+   display: flex;
+   justify-content: center;
 }
 
 .btn {
-  background-color: white;
-  padding: 1rem;
-  border: none;
-  border-radius: 1rem;
-  outline: none;
-  width: 10rem;
-  
-  color: black;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: 600;
+   background-color: white;
+   padding: 1rem;
+   border: none;
+   border-radius: 1rem;
+   outline: none;
+   width: 10rem;
 
+   color: black;
+   text-transform: uppercase;
+   font-size: 1.2rem;
+   font-weight: 600;
 }
 
 .btn:not(:last-child) {
-  margin-right: 1rem;
+   margin-right: 1rem;
+}
+
+.btn--reset {
+   margin: 0;
+   position: absolute;
+   top: 2rem;
+   left: 2rem;
 }
 
 .btn:hover {
-  background-color: var(--color-light);
-  cursor: pointer;
+   background-color: var(--color-light);
+   cursor: pointer;
 }
 
 .btn:active {
-  background-color: var(--color-light);
-  cursor: pointer;
-  box-shadow: inset 0 0 1rem #0000008f;
-  font-size: 1.1rem;
+   background-color: var(--color-light);
+   cursor: pointer;
+   box-shadow: inset 0 0 1rem #0000008f;
+   font-size: 1.1rem;
+}
+
+.input {
+   height: 3rem;
+   width: 3rem;
+   text-align: center;
+   font-size: 1.6rem;
+}
+
+.checkbox {
+   width: 3rem;
+   height: 3rem;
+}
+
+.result {
+   color: white;
+   margin-top: 2rem;
+   font-size: 3rem;
+}
+
+.result--correct {
+   color: var(--color-correct);
+}
+
+.result--incorrect {
+   color: var(--color-incorrect);
+}
+
+.learning-step {
+   color: white;
+   position: absolute;
+   top: 2rem;
+   right: 2rem;
 }

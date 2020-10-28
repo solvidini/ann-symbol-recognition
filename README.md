@@ -1,11 +1,15 @@
 # Perceptron Alphabet
-AI algorithm to detect any letter or number.
+
+AI algorithm to teach and to detect any symbol.
 
 ## Technologies
-* JavaScript 
+
+-  JavaScript
 
 ## Live
 
+soon
 
 ## Author
+
 Samuel Kędziora
