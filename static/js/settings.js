@@ -1,4 +1,4 @@
-export const learningFactor = 0.25;
+export const learningFactor = 0.11;
 export const recognitionBorder = 0.62;
 export const numberOfDendrites = 144;
 
