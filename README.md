@@ -1,6 +1,6 @@
 # Perceptron Alphabet
 
-AI algorithm to teach and to detect any symbol.
+AI algorithm to teach and recognize any symbol.
 
 ## Technologies
 
@@ -8,7 +8,7 @@ AI algorithm to teach and to detect any symbol.
 
 ## Live
 
-soon
+https://ssazero.github.io/ann-symbol-recognition/
 
 ## Author
 
