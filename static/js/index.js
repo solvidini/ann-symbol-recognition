@@ -9,6 +9,7 @@ import Perceptron from './perceptron.js';
 import { resetDendrites, toggleDendriteActivation } from './utils.js';
 
 // HTML ELEMENTS
+const app = document.querySelector('#app');
 const learningStep = document.querySelector('.learning-step');
 const grid = document.querySelector('.grid');
 const inputSymbol = document.querySelector('#input-symbol');
@@ -70,19 +71,17 @@ buttonReset.addEventListener('click', (event) => {
    location.reload();
 });
 
-grid.addEventListener(
+app.addEventListener(
    'mousedown',
    (event) => {
-      event.preventDefault();
       isMouseDown = true;
    },
    true
 );
 
-grid.addEventListener(
+app.addEventListener(
    'mouseup',
    (event) => {
-      event.preventDefault();
       isMouseDown = false;
    },
    true
