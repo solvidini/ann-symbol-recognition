@@ -6,7 +6,7 @@ const initializeWeights = (numberOfDendrites) => {
    return weights;
 };
 
-class Perceptron {
+class Neuron {
    constructor(
       learningFactor,
       recognitionBorder,
@@ -55,6 +55,7 @@ class Perceptron {
       const signalValue = this.calculateSignal(dendrites);
       const outputValue = this.calculateOutput(signalValue);
       const errorValue = this.calculateError(correctValue, outputValue);
+      console.log('Error value: ' + errorValue);
       const deltaValue = this.calculateDelta(errorValue, signalValue);
       this.calculateWeights(deltaValue, dendrites);
    }
@@ -67,4 +68,4 @@ class Perceptron {
    }
 }
 
-export default Perceptron;
+export default Neuron;

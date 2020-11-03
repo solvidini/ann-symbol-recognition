@@ -5,7 +5,7 @@ import {
    sigmoidActivation,
    derivativeSigmoidActivation,
 } from './settings.js';
-import Perceptron from './perceptron.js';
+import Neuron from './neuron.js';
 import { resetDendrites, toggleDendriteActivation } from './utils.js';
 
 // HTML ELEMENTS
@@ -26,8 +26,8 @@ let symbol = undefined;
 let isMouseDown = false;
 let step = 0;
 
-// PERCEPTRON INITIALIZATION
-let perceptron = null;
+// NEURON INITIALIZATION
+let neuron = null;
 
 // BASIC EVENT LISTENERS
 buttonTeach.addEventListener('click', (event) => {
@@ -35,7 +35,7 @@ buttonTeach.addEventListener('click', (event) => {
    if (!symbol) {
       symbol = inputSymbol.value;
       inputSymbol.disabled = true;
-      perceptron = new Perceptron(
+      neuron = new Neuron(
          learningFactor,
          recognitionBorder,
          numberOfDendrites,
@@ -44,7 +44,7 @@ buttonTeach.addEventListener('click', (event) => {
          symbol
       );
    }
-   perceptron.teach(dendrites, +inputCheck.checked);
+   neuron.teach(dendrites, +inputCheck.checked);
    resetDendrites(dendrites);
    step++;
    learningStep.textContent = `Learning step: ${step}`;
@@ -52,7 +52,7 @@ buttonTeach.addEventListener('click', (event) => {
 
 buttonRecognize.addEventListener('click', (event) => {
    if (!symbol) return false;
-   if (perceptron.recognize(dendrites)) {
+   if (neuron.recognize(dendrites)) {
       result.classList.remove('result--incorrect');
       result.classList.add('result--correct');
       result.textContent = `This is the "${symbol}" symbol.`;
