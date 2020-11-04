@@ -1,4 +1,4 @@
-# Neuron Symbol Recognition
+# ANN Symbol Recognition
 
 AI algorithm to teach and recognize any symbol.
 
