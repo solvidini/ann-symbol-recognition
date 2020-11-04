@@ -26,11 +26,10 @@ let symbol = undefined;
 let isMouseDown = false;
 let step = 0;
 
-// NEURON INITIALIZATION
 let neuron = null;
 
-// BASIC EVENT LISTENERS
-buttonTeach.addEventListener('click', (event) => {
+// EVENT FUNCTIONS
+const onTeachHandler = () => {
    if (!inputSymbol.value.trim()) return false;
    if (!symbol) {
       symbol = inputSymbol.value;
@@ -48,9 +47,9 @@ buttonTeach.addEventListener('click', (event) => {
    resetDendrites(dendrites);
    step++;
    learningStep.textContent = `Learning step: ${step}`;
-});
+};
 
-buttonRecognize.addEventListener('click', (event) => {
+const onRecognizeHandler = () => {
    if (!symbol) return false;
    if (neuron.recognize(dendrites)) {
       result.classList.remove('result--incorrect');
@@ -61,19 +60,24 @@ buttonRecognize.addEventListener('click', (event) => {
       result.classList.remove('result--correct');
       result.textContent = `This is not a "${symbol}" symbol.`;
    }
-});
+};
 
-buttonClear.addEventListener('click', (event) => {
+// BASIC EVENT LISTENERS
+buttonTeach.addEventListener('click', onTeachHandler);
+
+buttonRecognize.addEventListener('click', onRecognizeHandler);
+
+buttonClear.addEventListener('click', () => {
    resetDendrites(dendrites);
 });
 
-buttonReset.addEventListener('click', (event) => {
+buttonReset.addEventListener('click', () => {
    location.reload();
 });
 
 app.addEventListener(
    'mousedown',
-   (event) => {
+   () => {
       isMouseDown = true;
    },
    true
@@ -81,7 +85,7 @@ app.addEventListener(
 
 app.addEventListener(
    'mouseup',
-   (event) => {
+   () => {
       isMouseDown = false;
    },
    true
