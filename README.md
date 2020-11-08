@@ -1,6 +1,6 @@
 # ANN Symbol Recognition
 
-Artificial neural network algorithm to teach and recognize any symbol.
+Artificial neural network to teach and recognize any symbol using back propagation algorithm.
 
 ## Technologies
 
