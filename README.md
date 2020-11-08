@@ -1,6 +1,6 @@
 # ANN Symbol Recognition
 
-AI algorithm to teach and recognize any symbol.
+Artificial neural network algorithm to teach and recognize any symbol.
 
 ## Technologies
 
