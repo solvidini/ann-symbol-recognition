@@ -5,6 +5,8 @@ Artificial neural network to teach and recognize any symbol using back propagati
 ## Technologies
 
 -  JavaScript
+-  CSS
+-  HTML
 
 ## Live
 
