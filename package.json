@@ -1,6 +1,6 @@
 {
   "name": "ann-symbol-recognition",
-  "version": "1.0.5",
+  "version": "1.2.0",
   "description": "AI algorithm to recognize any letter or number.",
   "main": "index.js",
   "scripts": {

@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <title>ANN Symbol Recognition</title>
-      <link rel="stylesheet" type="text/css" href="./static/css/main.css" />
-      <meta name="author" content="Samuel Kedziora" />
-   </head>
-   <body>
-      <div id="app" class="app">
-         <button id="button-reset" class="btn btn--reset">Reset</button>
-         <div class="learning-step">Learning step: 0</div>
-         <div class="group">
-            <input
-               type="text"
-               id="input-symbol"
-               class="input input--symbol"
-               required
-               minlength="1"
-               maxlength="1"
-            />
-            <input type="checkbox" id="input-check" class="checkbox" />
-         </div>
-         <div class="grid"></div>
-         <div class="group">
-            <button id="button-clear" class="btn">Clear</button>
-            <button id="button-teach" class="btn">Teach</button>
-            <button id="button-recognize" class="btn">Recognize</button>
-         </div>
-         <div class="result"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ANN Symbol Recognition</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Samuel Kędziora" />
+    <meta
+      name="description"
+      content="Artificial neural network to teach and recognize any symbol using back propagation algorithm."
+    />
+    <meta
+      name="keywords"
+      content="Samuel, Kedziora, Kędziora, web, mern stack, web dev, developer, frontend, JavaScript, React, site, portfolio, katowice, silesia, website, backend, nodejs, node, native, mobile, full-stack, artificial, network, intelligence, back propagation, algorithm, recognize, symbol"
+    />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <div class="toolbar">
+        <button id="button-reset" class="btn btn--reset">Reset</button>
+        <div class="learning-step">Learning step:&nbsp;0</div>
       </div>
-      <script src="./static/js/index.js" type="module"></script>
-   </body>
+      <div class="group group--top">
+        <span class="group__text">Enter a symbol here &rarr;</span>
+        <input
+          type="text"
+          id="input-symbol"
+          class="input input--symbol"
+          required
+          minlength="1"
+          maxlength="1"
+        />
+        <input type="checkbox" id="input-check" class="checkbox" />
+        <span class="group__text">&larr; Mark the symbol</span>
+      </div>
+      <div class="grid"></div>
+      <div class="group">
+        <button id="button-clear" class="btn">Clear</button>
+        <button id="button-teach" class="btn">Teach</button>
+        <button id="button-recognize" class="btn">Recognize</button>
+      </div>
+      <div class="result"></div>
+      <div class="similarity">Similarity value: ?</div>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://docs.google.com/document/d/12mUjzvUqOf7CNLbXnhwjXXhoVX6UDW2xRTeusd2q9gk/edit#"
+        title="ANN Symbol recognition manual"
+        class="manual"
+      >
+        Symbol recognition manual
+      </a>
+    </div>
+    <script src="./static/js/index.js" type="module"></script>
+  </body>
 </html>
